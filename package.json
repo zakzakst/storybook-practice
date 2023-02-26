@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "storybook": "start-storybook -p 6006",
+    "build:storybook": "build-storybook"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/builder-vite": "^0.4.2",
+    "@storybook/vue3": "^6.5.16",
+    "nuxt": "^3.2.2",
+    "sass": "^1.58.3"
+  }
+}

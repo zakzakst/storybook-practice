@@ -1,7 +1,45 @@
-# storybook-practice
+# Nuxt 3 Minimal Starter
 
-下記を参考に練習
-https://zenn.dev/sa2knight/books/aca5d5e021dd10262bb9/viewer/003e84
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-コミットメッセージ参考
-https://qiita.com/itosho/items/9565c6ad2ffc24c09364
+## Setup
+
+Make sure to install the dependencies:
+
+```bash
+# yarn
+yarn install
+
+# npm
+npm install
+
+# pnpm
+pnpm install
+```
+
+## Development Server
+
+Start the development server on http://localhost:3000
+
+```bash
+npm run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+npm run build
+```
+
+Locally preview production build:
+
+```bash
+npm run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## 参考
+https://zenn.dev/shunk_py/articles/a52625f98fc8e7
