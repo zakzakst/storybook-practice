@@ -23,7 +23,7 @@ const onClick = () => {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $BLOCK_NAME: '.button';
 
 // 変数
