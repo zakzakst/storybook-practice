@@ -44,6 +44,9 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 ## 参考
 https://zenn.dev/shunk_py/articles/a52625f98fc8e7
 https://qiita.com/takeshisakuma/items/f4d54472b31ab098e147
+https://storybook.js.org/showcase
+
+https://engineering.nifty.co.jp/blog/3540
 
 ## github pages
 https://zakzakst.github.io/storybook-practice/

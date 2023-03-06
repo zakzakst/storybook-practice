@@ -5,19 +5,28 @@ module.exports = {
     '../src/stories/**/*.stories.mdx',
     '../src/stories/**/*.stories.@(js|jsx|ts|tsx)',
   ],
-  addons: ['@storybook/addon-essentials'],
+  addons: [
+    '@storybook/addon-essentials',
+    '@storybook/addon-controls',
+    '@storybook/addon-actions',
+    '@storybook/addon-viewport',
+    '@storybook/addon-backgrounds',
+    '@storybook/addon-measure',
+    '@storybook/addon-outline',
+    '@storybook/addon-docs',
+  ],
   framework: '@storybook/vue3',
   core: {
     builder: '@storybook/builder-vite',
   },
-  "features": {
-    "storyStoreV7": true
+  'features': {
+    'storyStoreV7': true
   },
   /** @param {InlineConfig} config */
   // async viteFinal(config) {
   //   const { config: { resolve } } = await loadConfigFromFile('../vite.config.ts')
   //   return mergeConfig(config, {
-  //     // Use the same "resolve" configuration as your app
+  //     // Use the same 'resolve' configuration as your app
   //     resolve,
   //     // Add dependencies to pre-optimization
   //     // optimizeDeps: {
