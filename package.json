@@ -7,12 +7,14 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "storybook": "start-storybook -p 6006",
-    "build:storybook": "build-storybook"
+    "build:storybook": "build-storybook",
+    "deploy": "gh-pages -d storybook-static"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^6.5.16",
     "@storybook/builder-vite": "^0.4.2",
     "@storybook/vue3": "^6.5.16",
+    "gh-pages": "^5.0.0",
     "nuxt": "^3.2.2",
     "sass": "^1.58.3"
   }
