@@ -1,4 +1,4 @@
-import Button01 from './Button01.vue'
+import Button04 from './Button04.vue'
 
 const descriptionMarkDown = `
 ## 見出し
@@ -13,8 +13,8 @@ https://path/to/page
 `
 
 export default {
-  title: 'Showcase/ボタン/ボタン01',
-  component: Button01,
+  title: 'Showcase/ボタン/ボタン04',
+  component: Button04,
   argTypes: {
     label: {
       description: 'ボタンテキスト',
@@ -32,21 +32,21 @@ export default {
         component: descriptionMarkDown,
       },
       source: {
-        code: `<Button01 label="テキスト" />`,
+        code: `<Button04 label="Button04" />`,
       },
     },
   },
 }
 
 const Template = (args) => ({
-  components: { Button01 },
+  components: { Button04 },
   setup() {
     return { args }
   },
-  template: '<Button01 v-bind="args" />',
+  template: '<Button04 v-bind="args" />',
 })
 
 export const Default = Template.bind({})
 Default.args = {
-  label: 'ボタン01',
+  label: 'Button04',
 }
