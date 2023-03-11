@@ -47,6 +47,17 @@ https://qiita.com/takeshisakuma/items/f4d54472b31ab098e147
 https://storybook.js.org/showcase
 https://engineering.nifty.co.jp/blog/3540
 https://chakra-ui.netlify.app/?path=/story/icons--default
+https://qiita.com/ysd_marrrr/items/b36dde85a2cb1e437f80
+
+### 共通SCSSの設定
+https://zenn.dev/shunk_py/articles/a52625f98fc8e7
 
 ## github pages
 https://zakzakst.github.io/storybook-practice/
+
+## 見てみる
+https://storybook.js.org/addons/storybook-vue-addon
+https://zenn.dev/sa2knight/books/storybook-7-with-vue-3/viewer/preview_js
+
+## エラー時に参考にした
+https://github.com/FortAwesome/vue-fontawesome/issues/215

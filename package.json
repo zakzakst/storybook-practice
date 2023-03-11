@@ -24,5 +24,13 @@
     "gh-pages": "^5.0.0",
     "nuxt": "^3.2.2",
     "sass": "^1.58.3"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.3.0",
+    "@fortawesome/free-brands-svg-icons": "^6.3.0",
+    "@fortawesome/free-regular-svg-icons": "^6.3.0",
+    "@fortawesome/free-solid-svg-icons": "^6.3.0",
+    "@fortawesome/vue-fontawesome": "^3.0.3",
+    "reset-css": "^5.0.1"
   }
 }

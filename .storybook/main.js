@@ -1,4 +1,8 @@
-// const { loadConfigFromFile, mergeConfig, InlineConfig } = require('vite')
+const {
+  // loadConfigFromFile,
+  mergeConfig,
+  // InlineConfig,
+} = require('vite')
 
 module.exports = {
   stories: [
@@ -21,6 +25,17 @@ module.exports = {
   },
   'features': {
     'storyStoreV7': true
+  },
+  viteFinal: async (config) => {
+    return mergeConfig(config, {
+      css: {
+        preprocessorOptions: {
+          scss: {
+            additionalData: '@import "../src/assets/styles/base.scss";',
+          },
+        },
+      },
+    })
   },
   /** @param {InlineConfig} config */
   // async viteFinal(config) {

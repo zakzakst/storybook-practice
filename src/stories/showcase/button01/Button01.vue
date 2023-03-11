@@ -2,7 +2,7 @@
   <a class="button" href="#" @click="onClick">
     <span class="button__text">{{ label }}</span>
     <span class="button__arrow">
-      <i class="fas fa-arrow-right"></i>
+      <font-awesome-icon icon="fas fa-arrow-right" class="icon" />
     </span>
   </a>
 </template>
@@ -23,7 +23,7 @@ const onClick = () => {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 $BLOCK_NAME: '.button';
 
 // 変数
@@ -73,8 +73,8 @@ $height-border: 2px;
       transform: scaleX(1);
       transform-origin: bottom left;
     }
-    .button-01__arrow {
-      svg {
+    #{ $BLOCK_NAME }__arrow {
+      .icon {
         animation: button01ArrowSlide $transition-arrow forwards;
       }
     }
