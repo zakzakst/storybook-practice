@@ -1,5 +1,6 @@
 <template>
-  <a class="button" href="#" @click="onClick">
+  <!-- <a class="button" href="#" @click="onClick"> -->
+  <a class="button" href="#">
     <span class="button__text">
       <span v-for="(c, index) in label" :key="index">{{ c }}</span>
     </span>
@@ -14,13 +15,13 @@ interface PropType {
 withDefaults(defineProps<PropType>(), {
   label: 'Button04',
 })
-type Emits = {
-  (e: 'click'): void
-}
-const emit = defineEmits<Emits>()
-const onClick = () => {
-  emit('click')
-}
+// type Emits = {
+//   (e: 'click'): void
+// }
+// const emit = defineEmits<Emits>()
+// const onClick = () => {
+//   emit('click')
+// }
 </script>
 
 <style lang="scss" scoped>

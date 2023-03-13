@@ -1,7 +1,7 @@
 import IconMail from '../../assets/mail.svg';
 
 export default {
-  title: 'Standard/アイコン',
+  title: 'Style Guide/アイコン',
   argTypes: {
     src: {
       control: false,
