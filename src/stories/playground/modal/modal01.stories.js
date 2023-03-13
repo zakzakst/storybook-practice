@@ -15,17 +15,35 @@ https://path/to/page
 export default {
   title: 'Playground/モーダル01',
   component: Modal01,
-  // argTypes: {
-  //   label: {
-  //     description: 'ボタンテキスト',
-  //     table: {
-  //       defaultValue: {
-  //         summary: 'テキスト',
-  //       },
-  //     },
-  //     control: 'text',
-  //   },
-  // },
+  argTypes: {
+    speed: {
+      description: 'アニメーションスピード',
+      table: {
+        defaultValue: {
+          summary: 'アニメーションスピード',
+        },
+      },
+      control: { type: 'number' },
+    },
+    translateY: {
+      description: '上下移動値',
+      table: {
+        defaultValue: {
+          summary: '上下移動値',
+        },
+      },
+      control: { type: 'number' },
+    },
+    scale: {
+      description: '拡大値',
+      table: {
+        defaultValue: {
+          summary: '拡大値',
+        },
+      },
+      control: { type: 'number' },
+    },
+  },
   parameters: {
     docs: {
       description: {
@@ -38,16 +56,17 @@ export default {
   },
 }
 
-// const Template = (args) => ({
-const Template = () => ({
+const Template = (args) => ({
   components: { Modal01 },
-  // setup() {
-  //   return { args }
-  // },
-  template: '<Modal01 />',
+  setup() {
+    return { args }
+  },
+  template: '<Modal01 v-bind="args" />',
 })
 
 export const Default = Template.bind({})
-// Default.args = {
-//   label: 'Button04',
-// }
+Default.args = {
+  speed: 0.2,
+  translateY: 50,
+  scale: 0.9,
+}
