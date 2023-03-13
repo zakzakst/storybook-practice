@@ -13,7 +13,7 @@ https://path/to/page
 `
 
 export default {
-  title: 'basic pattern/モーダル01',
+  title: 'Basic Pattern/モーダル01',
   component: Modal01,
   argTypes: {
     type: {
