@@ -1,2 +1,0 @@
-var e=Object.defineProperty;var n=(r,t)=>e(r,"name",{value:t,configurable:!0});import{h as i,a7 as o,a8 as a}from"./iframe-2820d81d.js";var s=i;s({target:"Number",stat:!0},{isNaN:n(function(t){return t!=t},"isNaN")});var l=n(function(t){if(!t)return"";if(typeof t=="string")return t;throw new Error("Description: expected string, got: ".concat(JSON.stringify(t)))},"str"),c=o,u=a;c("Map",function(r){return n(function(){return r(this,arguments.length?arguments[0]:void 0)},"Map")},u);export{l as s};
-//# sourceMappingURL=es.map.constructor-ec6228aa.js.map
