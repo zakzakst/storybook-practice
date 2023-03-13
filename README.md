@@ -58,6 +58,9 @@ https://stackoverflow.com/questions/72098527/use-global-vue-3-plugins-in-storybo
 https://storybook.js.org/docs/react/configure/story-rendering
 https://debug-life.net/entry/4676
 
+### アイコンコンポーネント
+https://v2.ja.vuejs.org/v2/cookbook/editable-svg-icons.html
+
 ### github pages
 https://qiita.com/takeshisakuma/items/f4d54472b31ab098e147#github-pagesに公開する
 https://zakzakst.github.io/storybook-practice/
@@ -65,6 +68,7 @@ https://zakzakst.github.io/storybook-practice/
 ### エラー時に参考にした
 https://github.com/FortAwesome/vue-fontawesome/issues/215
 https://stackoverflow.com/questions/74799253/storybook-nuxt-3-with-script-setup-component-computed-is-not-defined
+https://github.com/storybookjs/storybook/discussions/12691
 
 ## 見てみる
 https://storybook.js.org/addons/storybook-vue-addon
