@@ -13,35 +13,18 @@ https://path/to/page
 `
 
 export default {
-  title: 'Playground/モーダル01',
+  title: 'basic pattern/モーダル01',
   component: Modal01,
   argTypes: {
-    speed: {
-      description: 'アニメーションスピード',
+    type: {
+      description: 'アニメーションタイプ',
       table: {
         defaultValue: {
-          summary: 'アニメーションスピード',
+          summary: 'アニメーションタイプ',
         },
       },
-      control: { type: 'number' },
-    },
-    translateY: {
-      description: '上下移動値',
-      table: {
-        defaultValue: {
-          summary: '上下移動値',
-        },
-      },
-      control: { type: 'number' },
-    },
-    scale: {
-      description: '拡大値',
-      table: {
-        defaultValue: {
-          summary: '拡大値',
-        },
-      },
-      control: { type: 'number' },
+      control: { type: 'select' },
+      options: ['pop', 'fade', 'slide'],
     },
   },
   parameters: {
@@ -63,7 +46,5 @@ const Template = (args) => ({
 
 export const Default = Template.bind({})
 Default.args = {
-  speed: 0.2,
-  translateY: 50,
-  scale: 0.9,
+  type: 'pop',
 }
