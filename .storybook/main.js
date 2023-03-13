@@ -35,18 +35,8 @@ module.exports = {
           },
         },
       },
+      // リポジトリ名を設定
+      base: '/storybook-practice/',
     })
   },
-  /** @param {InlineConfig} config */
-  // async viteFinal(config) {
-  //   const { config: { resolve } } = await loadConfigFromFile('../vite.config.ts')
-  //   return mergeConfig(config, {
-  //     // Use the same 'resolve' configuration as your app
-  //     resolve,
-  //     // Add dependencies to pre-optimization
-  //     // optimizeDeps: {
-  //     //   include: ['storybook-dark-mode'],
-  //     // },
-  //   })
-  // },
 }
