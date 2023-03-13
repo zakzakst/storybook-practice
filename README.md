@@ -69,6 +69,7 @@ https://zakzakst.github.io/storybook-practice/
 https://github.com/FortAwesome/vue-fontawesome/issues/215
 https://stackoverflow.com/questions/74799253/storybook-nuxt-3-with-script-setup-component-computed-is-not-defined
 https://github.com/storybookjs/storybook/discussions/12691
+https://zenn.dev/tetracalibers/articles/b420f3fa146575
 
 ## 見てみる
 https://storybook.js.org/addons/storybook-vue-addon
