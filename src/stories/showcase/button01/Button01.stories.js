@@ -13,7 +13,7 @@ https://path/to/page
 `
 
 export default {
-  title: 'Showcase/ボタン/ボタン01',
+  title: 'Showcase/ボタン01',
   component: Button01,
   argTypes: {
     label: {
