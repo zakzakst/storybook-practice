@@ -75,6 +75,10 @@ https://zenn.dev/tetracalibers/articles/b420f3fa146575
 
 https://github.com/storybookjs/storybook/issues/14694
 
+一応preview.jsの拡張子変えるのも試してみる
+
+https://zenn.dev/bufferings/scraps/d01cd34de92199
+
 ## 見てみる
 https://storybook.js.org/addons/storybook-vue-addon
 https://zenn.dev/sa2knight/books/storybook-7-with-vue-3/viewer/preview_js
