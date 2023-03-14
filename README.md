@@ -71,6 +71,10 @@ https://stackoverflow.com/questions/74799253/storybook-nuxt-3-with-script-setup-
 https://github.com/storybookjs/storybook/discussions/12691
 https://zenn.dev/tetracalibers/articles/b420f3fa146575
 
+※下記試したけど上手くいかない（@storybook/builder-webpack5）もmain.jsの設定変えただけだと上手くいかない。GitHub Pagesでなくレンタルサーバーでも上手くいかないか確認する
+
+https://github.com/storybookjs/storybook/issues/14694
+
 ## 見てみる
 https://storybook.js.org/addons/storybook-vue-addon
 https://zenn.dev/sa2knight/books/storybook-7-with-vue-3/viewer/preview_js
