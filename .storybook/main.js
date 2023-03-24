@@ -2,30 +2,31 @@ const {
   // loadConfigFromFile,
   mergeConfig,
   // InlineConfig,
-} = require('vite')
+} = require("vite");
 
 module.exports = {
   stories: [
-    '../src/stories/**/*.stories.mdx',
-    '../src/stories/**/*.stories.@(js|jsx|ts|tsx)',
+    "../src/stories/**/*.stories.mdx",
+    "../src/stories/**/*.stories.@(js|jsx|ts|tsx)",
   ],
   addons: [
-    '@storybook/addon-essentials',
-    '@storybook/addon-controls',
-    '@storybook/addon-actions',
-    '@storybook/addon-viewport',
-    '@storybook/addon-backgrounds',
-    '@storybook/addon-measure',
-    '@storybook/addon-outline',
-    '@storybook/addon-docs',
+    "@storybook/addon-essentials",
+    "@storybook/addon-controls",
+    "@storybook/addon-actions",
+    "@storybook/addon-viewport",
+    "@storybook/addon-backgrounds",
+    "@storybook/addon-measure",
+    "@storybook/addon-outline",
+    "@storybook/addon-docs",
+    "storybook-design-token",
   ],
-  framework: '@storybook/vue3',
+  framework: "@storybook/vue3",
   core: {
-    builder: '@storybook/builder-vite',
+    builder: "@storybook/builder-vite",
     // builder: 'webpack5',
   },
-  'features': {
-    'storyStoreV7': true
+  features: {
+    storyStoreV7: true,
   },
   viteFinal: async (config) => {
     return mergeConfig(config, {
@@ -37,7 +38,7 @@ module.exports = {
         },
       },
       // リポジトリ名を設定
-      base: '/storybook-practice/',
-    })
+      base: "/storybook-practice/",
+    });
   },
-}
+};

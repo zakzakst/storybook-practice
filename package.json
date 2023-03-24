@@ -24,7 +24,8 @@
     "@storybook/vue3": "^6.5.16",
     "gh-pages": "^5.0.0",
     "nuxt": "^3.2.2",
-    "sass": "^1.58.3"
+    "sass": "^1.58.3",
+    "storybook-design-token": "^2.9.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",

@@ -1,7 +1,7 @@
-import { app } from '@storybook/vue3';
-import { fontawesomeInit } from '../src/plugins/fontawesomeInit'
+import { app } from "@storybook/vue3";
+import { fontawesomeInit } from "../src/plugins/fontawesomeInit";
 
-fontawesomeInit(app)
+fontawesomeInit(app);
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -11,4 +11,7 @@ export const parameters = {
       date: /Date$/,
     },
   },
-}
+  // designToken: {
+  //   disable: true,
+  // },
+};
