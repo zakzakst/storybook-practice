@@ -11,6 +11,7 @@
     "deploy": "gh-pages -d storybook-static"
   },
   "devDependencies": {
+    "@headlessui/vue": "^1.7.13",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-backgrounds": "^6.5.16",
     "@storybook/addon-controls": "^6.5.16",
@@ -33,7 +34,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.3.0",
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
     "@fortawesome/vue-fontawesome": "^3.0.3",
-    "@headlessui/vue": "^1.7.13",
+    "@types/animejs": "^3.1.7",
     "animejs": "^3.2.1",
     "reset-css": "^5.0.1"
   }
