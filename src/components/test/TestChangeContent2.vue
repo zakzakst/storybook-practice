@@ -218,6 +218,7 @@ $size: 600;
     z-index: 1;
     transform: scale(1.1);
     opacity: 0;
+    background: #fff;
     > .img {
       width: 100%;
       height: 100%;
