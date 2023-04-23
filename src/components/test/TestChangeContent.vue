@@ -7,7 +7,7 @@
     <button v-if="isType1" class="button --2" @click="changeType2">2に変更</button>
     <button v-if="!isType1" class="button --1" @click="changeType1">1に変更</button>
     <div ref="overlayEl" class="overlay" :class="isType1 ? '--1' : '--2'">
-      <div class="text">{{ isOverlayType1 ? '反撃！！' : '侵略！！' }}</div>
+      <div class="text">{{ isOverlayType1 ? 'なんの！！' : 'うおお！！' }}</div>
     </div>
   </div>
 </template>
@@ -20,6 +20,7 @@ import anime from '../../../node_modules/animejs/lib/anime.es.js'
 const isType1 = ref(true)
 const isOverlayType1 = ref(true)
 const overlayEl = ref()
+const speed = 500
 
 const changeType1 = () => {
   const tl = anime.timeline()
@@ -28,7 +29,7 @@ const changeType1 = () => {
     targets: overlayEl.value,
     rotate: ['-45deg', '-45deg'],
     translateX: ['-100%', '0'],
-    duration: 1000,
+    duration: speed,
     begin: () => {
       overlayEl.value.style.visibility = 'visible'
       isOverlayType1.value = true
@@ -43,9 +44,9 @@ const changeType1 = () => {
     targets: overlayEl.value,
     rotate: ['-45deg', '-45deg'],
     translateX: ['0', '100%'],
-    duration: 1000,
+    duration: speed,
     complete: () => {
-      overlayEl.value.style.visibility = 'visible'
+      overlayEl.value.style.visibility = null
     },
   })
 }
@@ -57,7 +58,7 @@ const changeType2 = () => {
     targets: overlayEl.value,
     rotate: ['-45deg', '-45deg'],
     translateX: ['100%', '0'],
-    duration: 1000,
+    duration: speed,
     begin: () => {
       overlayEl.value.style.visibility = 'visible'
       isOverlayType1.value = false
@@ -72,9 +73,9 @@ const changeType2 = () => {
     targets: overlayEl.value,
     rotate: ['-45deg', '-45deg'],
     translateX: ['0', '-100%'],
-    duration: 1000,
+    duration: speed,
     complete: () => {
-      overlayEl.value.style.visibility = 'visible'
+      overlayEl.value.style.visibility = null
     },
   })
 }
