@@ -1,47 +1,49 @@
 <template>
-  <div class="change-content-2">
-    <div class="container">
-      <!-- ▼▼▼ type-1 ▼▼▼ -->
-      <div class="content --type-1" :class="{ '--current': currentType === 'type-1' }">
-        <div class="buttons" :class="{ '--hide': isButtonsHide }">
-          <button class="button --1-2" @click="changeType('type-2')">2</button>
-          <button class="button --1-3" @click="changeType('type-3')">3</button>
-          <button class="detail-button --1" @click="isDetailShow = true">詳細1</button>
-          <button class="detail-button --2" @click="isDetailShow = true">詳細2</button>
+  <div class="change-content-2-wrapper">
+    <div ref="changeContent2Ref" class="change-content-2" @mousedown="mouseDownHandler">
+      <div class="container">
+        <!-- ▼▼▼ type-1 ▼▼▼ -->
+        <div class="content --type-1" :class="{ '--current': currentType === 'type-1' }">
+          <div class="buttons" :class="{ '--hide': isButtonsHide }">
+            <button class="button --1-2" @click="changeType('type-2')">2</button>
+            <button class="button --1-3" @click="changeType('type-3')">3</button>
+            <button class="detail-button --1" @click="isDetailShow = true">詳細1</button>
+            <button class="detail-button --2" @click="isDetailShow = true">詳細2</button>
+          </div>
+          <div class="bg">
+            <img class="img" src="https://picsum.photos/id/11/900/900" alt="">
+          </div>
         </div>
-        <div class="bg">
-          <img class="img" src="https://picsum.photos/id/11/900/900" alt="">
-        </div>
-      </div>
-      <!-- ▲▲▲ type-1 ▲▲▲ -->
+        <!-- ▲▲▲ type-1 ▲▲▲ -->
 
-      <!-- ▼▼▼ type-2 ▼▼▼ -->
-      <div class="content --type-2" :class="{ '--current': currentType === 'type-2' }">
-        <div class="buttons" :class="{ '--hide': isButtonsHide }">
-          <button class="button --2-1" @click="changeType('type-1')">1</button>
-          <button class="button --2-3" @click="changeType('type-3')">3</button>
-          <button class="detail-button --3" @click="isDetailShow = true">詳細3</button>
-          <button class="detail-button --4" @click="isDetailShow = true">詳細4</button>
+        <!-- ▼▼▼ type-2 ▼▼▼ -->
+        <div class="content --type-2" :class="{ '--current': currentType === 'type-2' }">
+          <div class="buttons" :class="{ '--hide': isButtonsHide }">
+            <button class="button --2-1" @click="changeType('type-1')">1</button>
+            <button class="button --2-3" @click="changeType('type-3')">3</button>
+            <button class="detail-button --3" @click="isDetailShow = true">詳細3</button>
+            <button class="detail-button --4" @click="isDetailShow = true">詳細4</button>
+          </div>
+          <div class="bg">
+            <img class="img" src="https://picsum.photos/id/17/900/900" alt="">
+          </div>
         </div>
-        <div class="bg">
-          <img class="img" src="https://picsum.photos/id/17/900/900" alt="">
-        </div>
-      </div>
-      <!-- ▲▲▲ type-2 ▲▲▲ -->
+        <!-- ▲▲▲ type-2 ▲▲▲ -->
 
-      <!-- ▼▼▼ type-3 ▼▼▼ -->
-      <div class="content --type-3" :class="{ '--current': currentType === 'type-3' }">
-        <div class="buttons" :class="{ '--hide': isButtonsHide }">
-          <button class="button --3-1" @click="changeType('type-1')">1</button>
-          <button class="button --3-2" @click="changeType('type-2')">2</button>
-          <button class="detail-button --5" @click="isDetailShow = true">詳細5</button>
-          <button class="detail-button --6" @click="isDetailShow = true">詳細6</button>
+        <!-- ▼▼▼ type-3 ▼▼▼ -->
+        <div class="content --type-3" :class="{ '--current': currentType === 'type-3' }">
+          <div class="buttons" :class="{ '--hide': isButtonsHide }">
+            <button class="button --3-1" @click="changeType('type-1')">1</button>
+            <button class="button --3-2" @click="changeType('type-2')">2</button>
+            <button class="detail-button --5" @click="isDetailShow = true">詳細5</button>
+            <button class="detail-button --6" @click="isDetailShow = true">詳細6</button>
+          </div>
+          <div class="bg">
+            <img class="img" src="https://picsum.photos/id/28/900/900" alt="">
+          </div>
         </div>
-        <div class="bg">
-          <img class="img" src="https://picsum.photos/id/28/900/900" alt="">
-        </div>
+        <!-- ▲▲▲ type-3 ▲▲▲ -->
       </div>
-      <!-- ▲▲▲ type-3 ▲▲▲ -->
     </div>
     <transition name="detail">
       <div v-if="isDetailShow" class="detail">
@@ -60,10 +62,44 @@ import { ref } from 'vue'
 /* @ts-ignore */
 import anime from '../../../node_modules/animejs/lib/anime.es.js'
 
+const changeContent2Ref = ref()
+const pos = ref({
+  top: 0,
+  left: 0,
+  x: 0,
+  y: 0,
+})
 const currentType = ref('type-1')
 const isButtonsHide = ref(false)
 const isDetailShow = ref(false)
 
+// 画像ドラッグ関連
+const mouseMoveHandler = (e: MouseEvent) => {
+  const dx = e.clientX - pos.value.x
+  const dy = e.clientY - pos.value.y
+  changeContent2Ref.value.scrollTop = pos.value.top - dy
+  changeContent2Ref.value.scrollLeft = pos.value.left - dx
+}
+
+const mouseUpHandler = () => {
+  document.removeEventListener('mousemove', mouseMoveHandler)
+  document.removeEventListener('mouseup', mouseUpHandler)
+  changeContent2Ref.value.style.cursor = null
+  changeContent2Ref.value.style.userSelect = null
+}
+
+const mouseDownHandler = (e: MouseEvent) => {
+  changeContent2Ref.value.style.cursor = 'grabbing'
+  changeContent2Ref.value.style.userSelect = 'none'
+  pos.value.left = changeContent2Ref.value.scrollLeft
+  pos.value.top = changeContent2Ref.value.scrollTop
+  pos.value.x = e.clientX
+  pos.value.y = e.clientY
+  document.addEventListener('mousemove', mouseMoveHandler)
+  document.addEventListener('mouseup', mouseUpHandler)
+}
+
+// コンテンツ切替アニメーション
 const changeType = (type: string) => {
   const currentContentBgEl = document.querySelector('.content.--current .bg')
   const targetContentBgEl = document.querySelector(`.content.--${type} .bg`)
@@ -91,16 +127,19 @@ const changeType = (type: string) => {
 </script>
 
 <style lang="scss" scoped>
-$size: 600;
+$size: 500;
 .change-content-2 {
   position: relative;
   overflow: auto;
+  cursor: grab;
   width: #{$size}px;
   height: #{$size}px;
   > .container {
     position: relative;
-    width: 100%;
-    height: 100%;
+    // width: 100%;
+    // height: 100%;
+    width: #{$size * 1.5}px;
+    height: #{$size * 1.5}px;
     > .content {
       position: absolute;
       top: 0;
@@ -226,6 +265,12 @@ $size: 600;
       vertical-align: bottom;
     }
   }
+}
+
+.change-content-2-wrapper {
+  position: relative;
+  width: #{$size}px;
+  height: #{$size}px;
   .detail {
     position: absolute;
     top: 0;
