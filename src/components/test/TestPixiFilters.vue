@@ -36,10 +36,10 @@ onMounted(() => {
   shockwaveFilter.value = new ShockwaveFilter(
     [300, 300],
     {
-      amplitude: 10,
-      wavelength: 10,
-      brightness: 5,
-      radius: 0,
+      amplitude: 20,
+      wavelength: 0, // 初期表示時点で小さい白い点が出てしまうことへの対応
+      brightness: 2,
+      radius: 400,
     },
     0
   )
@@ -49,13 +49,16 @@ onMounted(() => {
 
 
 const onClick = () => {
+  shockwaveFilter.value.wavelength = 10
   anime({
     targets: shockwaveFilter.value,
     time: 1,
-    duration: 1000,
-    easing: "easeInCubic",
+    duration: 600,
+    easing: "easeOutQuad",
+    // easing: 'linear',
     complete: () => {
       shockwaveFilter.value.time = 0
+      shockwaveFilter.value.wavelength = 0
     },
   })
 }
